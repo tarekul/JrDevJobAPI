@@ -12,10 +12,11 @@ job.start();
 const getAsync = promisify(client.get).bind(client);
 
 app.get("/jobs", async (req, res) => {
-  const gJobs = JSON.parse(await getAsync("github"));
-  //const jJobs = JSON.parse(await getAsync("jooble"));
-  res.header("Access-Control-Allow-Origin", "*");
-  return res.send(gJobs);
+  // const gJobs = JSON.parse(await getAsync("github"));
+  // //const jJobs = JSON.parse(await getAsync("jooble"));
+  // res.header("Access-Control-Allow-Origin", "*");
+  // return res.send(gJobs);
+  res.send("hi");
 });
 app.listen(port, () => {
   console.log(`listening on port: ${port}`);
