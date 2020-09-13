@@ -32,7 +32,7 @@ app.get("/jobs", async (req, res) => {
 
   if (!githubJobs) githubJobs = await fetchGithub();
 
-  res.json(githubJobs);
+  await res.json(githubJobs);
 });
 app.listen(port, () => {
   console.log(`listening on port: ${port}`);
