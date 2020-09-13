@@ -12,7 +12,7 @@ const fetchGithub = require("./fetch-github");
 let githubJobs;
 
 const job = new CronJob(
-  "* * * * *",
+  "0 * * * *",
   () => {
     fetchGithub().then((res) => (githubJobs = res));
   },
