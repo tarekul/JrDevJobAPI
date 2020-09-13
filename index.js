@@ -16,7 +16,7 @@ app.get("/jobs", async (req, res) => {
   // //const jJobs = JSON.parse(await getAsync("jooble"));
   // res.header("Access-Control-Allow-Origin", "*");
   // return res.send(gJobs);
-  res.json({ hello });
+  res.send("hi");
 });
 app.listen(port, () => {
   console.log(`listening on port: ${port}`);
