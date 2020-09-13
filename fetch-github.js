@@ -34,9 +34,12 @@ async function fetchGithub() {
       return false;
     else if (
       job.description.includes("3-5") ||
+      job.description.includes("5") ||
       job.description.includes("4-5") ||
       job.description.includes("5+") ||
+      job.description.includes("5 +") ||
       job.description.includes("4+") ||
+      job.description.includes("10 +") ||
       job.description.includes("8-12")
     )
       return false;
